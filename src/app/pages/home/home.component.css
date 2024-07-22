@@ -1,0 +1,62 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #000000;
+  height: 90vh;
+}
+
+.roulette-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.roulette {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ecbb08;
+  animation: girar 10s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: #00000059 5px 5px 20px 13px;
+}
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(3600deg); }
+  100% { transform: rotate(3600deg); }
+}
+.section {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  transform-origin: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.lose {
+  background-color: #be05a5;
+  transform: rotate(0deg);
+}
+.win {
+  background-color: #08ea11;
+  transform: rotate(180deg);
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid #f5c107;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
